@@ -1,19 +1,19 @@
 
 // Dos playlist:
-const sad = [];
-const chill = [];
+const sad = ["Moon Song", "No surprises", "Karma Police"];
+const chill = ["Like a Tattoo", "See you again", "I'll haunt you"];
 
 
 //nombre
-let nombre = prompt("Ingresá tu nombre.")
+const nombre = prompt("Ingresá tu nombre.")
 
 //funcion ver playlist bajon
 
 function verListaSad() {
-    if (playlist.length === 0) {
+    if (sad.length === 0) {
         alert("No agregaste ninguna canción a tu lista de reproducción.");
     } else {
-        alert(playlist.join("\n"));
+        alert(sad.join("\n"));
     };
 };
 
@@ -29,12 +29,12 @@ function verListaChill() {
 // funcion para agregar una canción
 function guardarCancion(){
     const nuevaCancion = prompt("Ingrese el nombre de la canción");
-    let elegir = prompt('¿A qué playlist quieres agregarla? ("sad" o "chill")');
+    let elegir = parseInt(prompt("Para guardarla en tu playlist bajon ingresá 1 \nPara guardarla en tu playlist chill ingresá 2"));
 
-    if (elegir === "sad"|| "SAD" || "Sad") {
+    if (elegir === 1) {
         sad.push(nuevaCancion);
         alert("Agregaste a tu Playlist bajon: " + nuevaCancion);
-    } else if (elegir === "chill"|| "CHILL" || "Chill") {
+    } else if (elegir === 2) {
         chill.push(nuevaCancion);
         alert("Agregaste a tu Playlist chill: " + nuevaCancion);
     } else {
@@ -44,13 +44,13 @@ function guardarCancion(){
 
 
 do {
-    opcion = parseInt(prompt("Playlists\n\n1. Para ver La playlist bajon.\n2. Para ver la playlist chill.\n3. Para guardar una canción.\n\n 0. Para salir"));
+    opcion = parseInt(prompt("Playlists\n\n1. Para ver La playlist bajon.\n2. Para ver la playlist chill.\n3. Para guardar una canción.\n0. Para salir"));
     switch (opcion) {
         case 0:
-            alert("¡Nos vemos!" + nombre);
+            alert("¡Nos vemos " + nombre + "!");
             break;
         case 1:
-            verListaChill();
+            verListaSad();
             break;
         case 2:
             verListaChill();
