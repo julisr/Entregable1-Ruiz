@@ -3,7 +3,6 @@
 const sad = ["Moon Song", "No surprises", "Karma Police"];
 const chill = ["Like a Tattoo", "See you again", "I'll haunt you"];
 
-
 //nombre
 const nombre = prompt("Ingresá tu nombre.")
 
@@ -26,7 +25,7 @@ function verListaChill() {
     };
 };
 
-// funcion para agregar una canción
+//funcion para agregar una canción
 function guardarCancion(){
     const nuevaCancion = prompt("Ingrese el nombre de la canción");
     let elegir = parseInt(prompt("Para guardarla en tu playlist bajon ingresá 1 \nPara guardarla en tu playlist chill ingresá 2"));
@@ -41,7 +40,6 @@ function guardarCancion(){
         alert("mmm, no te entendí. Intentá de nuevo.");
     }
 }
-
 
 do {
     opcion = parseInt(prompt("Playlists\n\n1. Para ver La playlist bajon.\n2. Para ver la playlist chill.\n3. Para guardar una canción.\n0. Para salir"));
