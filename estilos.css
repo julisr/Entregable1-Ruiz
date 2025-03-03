@@ -1,0 +1,63 @@
+body{
+font-family: "Roboto Mono", monospace;
+}
+
+.formulario {
+    padding-bottom: 15px;
+}
+.contenedor{
+    width: 50%;
+    margin: 0 auto;
+    gap: 15px;
+    padding: 20px;
+    background-color: pink;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+}
+
+
+.playlist {
+    padding-top: 2%;
+    color: white;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    scale: 1;
+    &:hover{
+        scale: 1.15;
+    }  
+  }
+
+  .nombreLista {
+    text-align: center;
+    padding-bottom: 2%;
+    font-weight: 700;
+  }
+
+  .canciones  {
+    list-style: none;
+    
+  }
+
+  .canciones li {
+ 
+        padding-bottom: 20px;
+        font-weight: 700;
+        span {
+            font-weight: 400;
+        }
+    }
+    
+  
+
+  .amarillo {
+    background-color: #FFE797;
+   
+  }
+
+ .amarillo li:nth-child(odd) {
+    
+        background-color: #F2D888; 
+    }
+
