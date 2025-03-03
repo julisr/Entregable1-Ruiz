@@ -61,3 +61,13 @@ font-family: "Roboto Mono", monospace;
         background-color: #F2D888; 
     }
 
+.icono-eliminar {
+    margin: 5px;
+    padding: 10px;
+    cursor: pointer;
+    color: white;
+}
+
+.icono-eliminar:hover{
+    background-color: rgba(255, 255, 255, 0,523);
+}

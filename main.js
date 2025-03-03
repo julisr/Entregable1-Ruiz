@@ -1,23 +1,22 @@
 
-const formulario = document.querySelector(".formulario"); // Selecciona el formulario
-const input = document.querySelector(".input"); // Selecciona el input
-const listaCanciones = document.querySelector(".canciones"); // Selecciona la lista UL 
+const formulario = document.querySelector(".formulario"); 
+const input = document.querySelector(".input"); 
+const listaCanciones = document.querySelector(".canciones"); 
 
 
 const agregar = event => {
-    event.preventDefault(); // Evita que la página se recargue al enviar el formulario
+    event.preventDefault();
+    const nombreCancion = input.value.trim(); 
+    if (nombreCancion === "") return; 
 
-    const nombreCancion = input.value.trim(); // Obtiene el texto del input y quita espacios extra
-    if (nombreCancion === "") return; // Si el input está vacío, no hace nada
+    const nuevaCancion = document.createElement("li"); 
+    nuevaCancion.textContent = nombreCancion; 
 
-    const nuevaCancion = document.createElement("li"); // Crea un nuevo <li>
-    nuevaCancion.textContent = nombreCancion; // Le pone el nombre de la canción
-
-    listaCanciones.appendChild(nuevaCancion); // Agrega el <li> a la lista <ul>
-    inputCancion.value = ""; // Limpia el input después de agregar
+    listaCanciones.appendChild(nuevaCancion); 
+    inputCancion.value = ""; 
 };
 
-// Escuchar el evento "submit" del formulario
+
 formulario.addEventListener("submit", agregar);
 
 
