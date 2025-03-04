@@ -10,7 +10,7 @@ font-family: "Roboto Mono", monospace;
     margin: 0 auto;
     gap: 15px;
     padding: 20px;
-    background-color: pink;
+    background-color: #FF80AB;
     text-align: center;
     box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
 }
@@ -27,47 +27,40 @@ font-family: "Roboto Mono", monospace;
     &:hover{
         scale: 1.15;
     }  
-  }
+}
 
-  .nombreLista {
+.nombreLista {
     text-align: center;
     padding-bottom: 2%;
     font-weight: 700;
-  }
+}
 
-  .canciones  {
+.canciones  {
     list-style: none;
+    background-color: inherit; 
+    padding: 10px; 
+    border-radius: 10px; 
     
-  }
+}
 
-  .canciones li {
- 
+.canciones li {
+
         padding-bottom: 20px;
-        font-weight: 700;
-        span {
-            font-weight: 400;
-        }
+        display: flex;  
+        justify-content: space-between; 
+        align-items: center; 
     }
     
-  
+.canciones spam {
+    font-weight: 700;
+}
 
-  .amarillo {
-    background-color: #FFE797;
-   
-  }
-
- .amarillo li:nth-child(odd) {
-    
-        background-color: #F2D888; 
+    .amarillo {
+        background-color: #7A1122;
+        padding: 10px; 
     }
 
-.icono-eliminar {
-    margin: 5px;
-    padding: 10px;
-    cursor: pointer;
-    color: white;
-}
+    .amarillo li:nth-child(odd) {
+        background-color: #F2D888;
+    }
 
-.icono-eliminar:hover{
-    background-color: rgba(255, 255, 255, 0,523);
-}
