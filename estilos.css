@@ -1,11 +1,12 @@
-body{
-font-family: "Roboto Mono", monospace;
+body { 
+    font-family: "Roboto Mono", monospace;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
 }
 
-.formulario {
-    padding-bottom: 15px;
-}
-.contenedor{
+
+.contenedor {
     width: 50%;
     margin: 0 auto;
     gap: 15px;
@@ -13,6 +14,30 @@ font-family: "Roboto Mono", monospace;
     background-color: #FF80AB;
     text-align: center;
     box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+    border-radius: 10px;
+}
+
+.formulario {
+    padding-bottom: 15px;
+}
+
+.inputCancion, .inputArtista {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.boton {
+    padding: 10px 20px;
+    background-color: #7A1122;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.boton:hover {
+    background-color: #F2D888;
 }
 
 
@@ -23,10 +48,6 @@ font-family: "Roboto Mono", monospace;
     justify-content: center;
     align-items: center;
     width: 100%;
-    scale: 1;
-    &:hover{
-        scale: 1.15;
-    }  
 }
 
 .nombreLista {
@@ -35,32 +56,56 @@ font-family: "Roboto Mono", monospace;
     font-weight: 700;
 }
 
-.canciones  {
+.canciones {
     list-style: none;
-    background-color: inherit; 
-    padding: 10px; 
-    border-radius: 10px; 
-    
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #f8f8f8;
 }
 
 .canciones li {
-
-        padding-bottom: 20px;
-        display: flex;  
-        justify-content: space-between; 
-        align-items: center; 
-    }
-    
-.canciones spam {
-    font-weight: 700;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-    .amarillo {
-        background-color: #7A1122;
-        padding: 10px; 
-    }
+.canciones img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    object-fit: cover;
+    margin-right: 15px;
+}
 
-    .amarillo li:nth-child(odd) {
-        background-color: #F2D888;
-    }
+.audio {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.iconos {
+    cursor: pointer;
+}
+
+.iconos i {
+    font-size: 20px;
+    color: #FF80AB;
+}
+
+.iconos i:hover {
+    color: #7A1122;
+}
+
+.amarillo {
+    background-color: #7A1122;
+    padding: 10px;
+}
+
+.amarillo li:nth-child(odd) {
+    background-color: #F2D888;
+}
 
