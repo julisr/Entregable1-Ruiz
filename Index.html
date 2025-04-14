@@ -13,26 +13,23 @@
  
 </head>
 
-
 <body>
     <div class="contenedor borde">
+  
+      <form id="formulario">
+        <input type="text" name="cancion" placeholder="Nueva Canción" id="ingresoCancion" class="borde">
+        <input type="text" name="artista" placeholder="Nuevo Artista" id="ingresoArtista" class="borde"> 
+        <button type="submit" class="boton">+</button>
+      </form>
+  
+      <div id="listaCanciones" class="playlist amarillo">
+        <p class="nombreLista">Playlist</p>
+        <ul class="canciones amarillo">
 
-        <form class="formulario">
-            <input type="text" name="cancion" autocomplete="off" placeholder="Nueva Canción" class="inputCancion borde">
-            <input type="text" name="artista" autocomplete="off" placeholder="Nuevo Artista" class="inputArtista borde"> 
-            <button type="submit" class="boton">+</button>
-        </form>
-
-        <div id="listas">
-            <div class="playlist amarillo">
-                <p class="nombreLista">Playlist 1</p>
-                <ul class="canciones amarillo">    
-                </ul>
-            </div>
-        </div>
+        </ul>
+      </div>
+  
     </div>
-
+  
     <script src="main.js"></script>
-</body>
-
-</body>
+  </body>
