@@ -6,11 +6,11 @@ body {
 }
 
 .contenedor {
-    width: 50%;
+    width: 75%;
     margin: 0 auto;
     gap: 15px;
     padding: 20px;
-    background-color: #FF80AB;
+    background-color: #F7CDB7;
     text-align: center;
     box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
     border-radius: 10px;
@@ -43,10 +43,11 @@ body {
     padding: 2%;
     color: white;
     font-size: 20px;
-    width: 100%;
+    width: 90%;
     background-color: #7A1122;
     list-style: none;
     border-radius: 10px;
+    margin: 0 auto;
 }
 
 .nombreLista {
