@@ -44,8 +44,9 @@ function agregar(event) {
         let eliminar = document.createElement('i');
         eliminar.classList.add('bi', 'bi-dash-circle');
         eliminar.addEventListener('click', () => nombreCancion.remove());
+        
          icono.appendChild(eliminar);
-        nombreCancion.appendChild(icono);
+         
 
                     listaCanciones.appendChild(nombreCancion);
                     Toastify({
@@ -62,14 +63,9 @@ function agregar(event) {
                             title: "UPSS",
                             text: "No se encontró la canción en Deezer",
                             showConfirmButton: true,
+                            showConfirmButton: "Reintentar",
                             timer: 4000,
                         })     
-       
-                    
-
-                    
-            
-                      
                 
                 }
 
@@ -78,22 +74,24 @@ function agregar(event) {
             })
             .catch(error => {
                 console.error("Error al buscar en Deezer:", error);
-                    Swal.fire ({
-                        icon: "error",
-                        title: "UPS",
-                        text: "Ocurrió un error al buscar la canción.",
-                        showConfirmButton: true,
+                Swal.fire ({
+                icon: "error",
+                title: "UPS",
+                text: "Ocurrió un error al buscar la canción.",
+                showConfirmButton: true,
+                confirmButtonText: 'Reintentar',
+
                     })     
 
             });
     } else {
         Toastify({
-            text: "Ingresá la canción y el artista",
-            duration: 1000,
-            gravity: "top",
-            position: "right",
-            backgroundColor: "#7A1122",
-            stopOnFocus: true
+        text: "Ingresá la canción y el artista",
+        duration: 1000,
+        gravity: "top",
+        position: "right",
+        backgroundColor: "#7A1122",
+        stopOnFocus: true
           }).showToast();
 }
 }
