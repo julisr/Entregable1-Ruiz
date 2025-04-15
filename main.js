@@ -46,7 +46,7 @@ function agregar(event) {
         eliminar.addEventListener('click', () => nombreCancion.remove());
         
          icono.appendChild(eliminar);
-         
+         nombreCancion.appendChild(icono);
 
                     listaCanciones.appendChild(nombreCancion);
                     Toastify({
