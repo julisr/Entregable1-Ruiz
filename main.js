@@ -2,6 +2,7 @@ const formulario = document.getElementById("formulario");
 const ingresoCancion = document.getElementById("ingresoCancion");
 const ingresoArtista = document.getElementById("ingresoArtista");
 const listaCanciones = document.querySelector(".canciones");
+const boton = document.querySelector(".boton")
 
 function agregar(event) {
     event.preventDefault();
@@ -17,12 +18,13 @@ function agregar(event) {
           if (resultados.length > 0) {
           const info = resultados[0];
 
-        let nombreCancion = document.createElement('li');
-        nombreCancion.classList.add('cancion');
+          let nombreCancion = document.createElement('li');
+          nombreCancion.classList.add('cancion');
 
         let texto = document.createElement("p");
         texto.innerHTML = `<strong>${info.title}</strong> - ${info.artist.name}`;
         nombreCancion.appendChild(texto);
+        
 
         
          let imagen = document.createElement("img");
@@ -46,8 +48,29 @@ function agregar(event) {
         nombreCancion.appendChild(icono);
 
                     listaCanciones.appendChild(nombreCancion);
+                    Toastify({
+                        text: "Canción agregada",
+                        duration: 1000,
+                        gravity: "top",
+                        position: "right",
+                        backgroundColor: "#F2D888",
+                        stopOnFocus: true
+                      }).showToast();
                 } else {
-                    alert("No se encontró la canción en Deezer");
+                        Swal.fire ({
+                            icon: "error",
+                            title: "UPSS",
+                            text: "No se encontró la canción en Deezer",
+                            showConfirmButton: true,
+                            timer: 4000,
+                        })     
+       
+                    
+
+                    
+            
+                      
+                
                 }
 
                 ingresoCancion.value = "";
@@ -55,11 +78,24 @@ function agregar(event) {
             })
             .catch(error => {
                 console.error("Error al buscar en Deezer:", error);
-                alert("Ocurrió un error al buscar la canción.");
+                    Swal.fire ({
+                        icon: "error",
+                        title: "UPS",
+                        text: "Ocurrió un error al buscar la canción.",
+                        showConfirmButton: true,
+                    })     
+
             });
     } else {
-        alert('Por favor, ingresá la canción y el artista');
-    }
+        Toastify({
+            text: "Ingresá la canción y el artista",
+            duration: 1000,
+            gravity: "top",
+            position: "right",
+            backgroundColor: "#7A1122",
+            stopOnFocus: true
+          }).showToast();
+}
 }
 
 formulario.addEventListener("submit", agregar);

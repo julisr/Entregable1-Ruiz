@@ -40,12 +40,13 @@ body {
 }
 
 .playlist {
-    padding-top: 2%;
+    padding: 2%;
     color: white;
     font-size: 20px;
-    justify-content: center;
-    align-items: center;
     width: 100%;
+    background-color: #7A1122;
+    list-style: none;
+    border-radius: 10px;
 }
 
 .nombreLista {
@@ -54,21 +55,15 @@ body {
     font-weight: 700;
 }
 
-#canciones {
-    list-style: none;
-    padding: 10px;
-    border-radius: 10px;
-    background-color: #f8f8f8;
-}
 
-.canciones li {
+.canciones {
     padding: 15px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    align-items: center;    
+    text-align: center;
     border-radius: 8px;
     margin-bottom: 15px;
-    background-color: #fff;
+    background-color: #F2D888;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -98,11 +93,3 @@ body {
     color: #7A1122;
 }
 
-.amarillo {
-    background-color: #7A1122;
-    padding: 10px;
-}
-
-.amarillo li:nth-child(odd) {
-    background-color: #F2D888;
-}
