@@ -43,8 +43,21 @@ function agregar(event) {
         icono.classList.add('iconos');
         let eliminar = document.createElement('i');
         eliminar.classList.add('bi', 'bi-dash-circle');
-        eliminar.addEventListener('click', () => nombreCancion.remove());
-        
+
+        eliminar.addEventListener("click", () => {
+            nombreCancion.remove();
+          
+            Toastify({
+              text: "Canción eliminada",
+              duration: 1000,
+              gravity: "top",
+              position: "right",
+              backgroundColor: "#8C3C47", 
+              stopOnFocus: true
+            }).showToast();
+          });
+
+       
          icono.appendChild(eliminar);
          nombreCancion.appendChild(icono);
 
@@ -90,7 +103,7 @@ function agregar(event) {
         duration: 1000,
         gravity: "top",
         position: "right",
-        backgroundColor: "#7A1122",
+        backgroundColor: "#8C3C47",
         stopOnFocus: true
           }).showToast();
 }
