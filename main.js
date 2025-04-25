@@ -72,7 +72,7 @@ function agregar(event) {
                       }).showToast();
                 } else {
                         Swal.fire ({
-                            icon: "error",
+                            icon: "question",
                             title: "UPSS",
                             text: "No se encontró la canción en Deezer",
                             showConfirmButton: true,
@@ -88,7 +88,7 @@ function agregar(event) {
             .catch(error => {
                 console.error("Error al buscar en Deezer:", error);
                 Swal.fire ({
-                icon: "error",
+                icon: "warning",
                 title: "UPS",
                 text: "Ocurrió un error al buscar la canción.",
                 showConfirmButton: true,
